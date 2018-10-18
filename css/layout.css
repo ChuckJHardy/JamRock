@@ -1,0 +1,4 @@
+/* Fix Sticky Footer Issue */
+.page {
+    min-height: 100vh;
+}

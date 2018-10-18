@@ -2,8 +2,9 @@ import * as React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-import { Site, Nav, Button } from 'tabler-react'
+import { Site, Grid, List, Nav, Button } from 'tabler-react'
 
+import "../css/layout.css"
 import Logo from '../static/logo.svg'
 
 type Props = {
@@ -57,10 +58,40 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
         )
       }}
       navProps={{ itemsObjects: navBarItems }}
+      footerProps={{
+        links: [
+          <Link href="/"><a>Home</a></Link>,
+        ],
+        copyright: (
+          <React.Fragment>
+            Copyright © 2018 <Link href="/"><a>Pik.Space</a></Link> All rights reserved.
+          </React.Fragment>
+        ),
+        nav: (
+          <React.Fragment>
+            <Grid.Col auto={true}>
+              <List className="list-inline list-inline-dots mb-0">
+                <List.Item className="list-inline-item">
+                  <a target="_blank" rel="nofollow" href="">
+                    Documentation
+                  </a>
+                </List.Item>
+                <List.Item className="list-inline-item">
+                  <a target="_blank" rel="nofollow" href="">
+                    Help
+                  </a>
+                </List.Item>
+              </List>
+            </Grid.Col>
+            <Grid.Col auto={true}>
+              <Button href="" size="sm" outline color="primary" RootComponent="a">
+                Install CLI
+              </Button>
+            </Grid.Col>
+          </React.Fragment>
+        )
+      }}
     />
-    <footer>
-      Footer
-    </footer>
   </div>
 )
 

@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Link from 'next/link'
-import Head from 'next/head'
+import { Site, Nav, Button } from 'tabler-react'
+
+import "tabler-react/dist/Tabler.css"
 
 type Props = {
   title?: string
@@ -8,18 +10,39 @@ type Props = {
 
 const Layout: React.SFC<Props> = ({ children, title = 'This is the default title' }) => (
   <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet='utf-8' />
-      <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-    </Head>
     <header>
       <nav>
         <Link href='/'><a>Home</a></Link> |{' '}
         <Link href='/about'><a>About</a></Link>
       </nav>
     </header>
-    {children}
+    <Site.Wrapper
+      children={children}
+      headerProps={{
+        href: '/',
+        alt: 'Pik Space',
+        imageURL: "",
+        navItems: (
+          <Nav.Item type="div" className="d-none d-md-flex">
+            <Button.List>
+              <Button href="" target="_blank" link RootComponent="a">
+                Help
+            </Button>
+              <Button
+                href=""
+                target="_blank"
+                outline
+                size="sm"
+                RootComponent="a"
+                color="primary"
+              >
+                Install CLI
+            </Button>
+            </Button.List>
+          </Nav.Item>
+        )
+      }}
+    />
     <footer>
       Footer
     </footer>

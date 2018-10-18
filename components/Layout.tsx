@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { withRouter } from 'next/router'
 import { Site, Nav, Button } from 'tabler-react'
 
+import Logo from '../static/logo.svg'
+
 type Props = {
   title?: string
 }
@@ -18,7 +20,8 @@ const NavLink = (props) => {
 }
 
 const navBarItems = [
-  { value: "About", to: "/about", icon: "home", LinkComponent: withRouter(NavLink) },
+  { value: "Home", to: "/", icon: "home", LinkComponent: withRouter(NavLink) },
+  { value: "About", to: "/about", icon: "eye", LinkComponent: withRouter(NavLink) },
 ]
 
 const Layout: React.SFC<Props> = ({ children, title = 'This is the default title' }) => (
@@ -32,11 +35,25 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
       headerProps={{
         href: '/',
         alt: 'Pik Space',
-        imageURL: "",
+        imageURL: Logo,
         navItems: (
           <Nav.Item type="div" className="d-none d-md-flex">
-            <Link href='/about'><a>About</a></Link>
-          </Nav.Item>
+          <Button.List>
+            <Button href="" target="_blank" link RootComponent="a">
+              Help
+            </Button>
+            <Button
+              href=""
+              target="_blank"
+              outline
+              size="sm"
+              RootComponent="a"
+              color="primary"
+            >
+              Install CLI
+            </Button>
+          </Button.List>
+        </Nav.Item>
         )
       }}
       navProps={{ itemsObjects: navBarItems }}

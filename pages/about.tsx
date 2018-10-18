@@ -1,9 +1,14 @@
-import Link from 'next/link'
 import Layout from '../components/Layout';
+import { Grid, Page } from 'tabler-react'
 
 export default () => (
   <Layout title="About">
-    <p>This is the about page</p>
-    <p><Link href='/'><a>Home</a></Link></p>
+    <Page.Content title="About">
+      <Grid.Row cards={true}>
+        <Grid.Col width={6} sm={4} lg={2}>
+          <p>This is the about page</p>
+        </Grid.Col>
+      </Grid.Row>
+    </Page.Content>
   </Layout>
 )

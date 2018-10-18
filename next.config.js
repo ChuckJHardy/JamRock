@@ -1,2 +1,28 @@
 const withTypescript = require('@zeit/next-typescript')
-module.exports = withTypescript()
+const withCSS = require('@zeit/next-css')
+
+// fix: prevents error when .css files are required by node
+if (typeof require !== 'undefined') {
+  require.extensions['.css'] = (file) => {}
+}
+
+module.exports = withTypescript(
+  withCSS({
+    webpack(config) {
+      config.module.rules.push({
+        test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 100000,
+            publicPath: './',
+            outputPath: 'static/',
+            name: '[name].[ext]'
+          }
+        }
+      })
+
+      return config
+    }
+  })
+)

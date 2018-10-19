@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { withRouter } from 'next/router'
 import { Site, Grid, List, Nav, Button } from 'tabler-react'
 
-import "../css/layout.css"
 import Logo from '../static/logo.svg'
 
 type Props = {
@@ -40,9 +39,6 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
         navItems: (
           <Nav.Item type="div" className="d-none d-md-flex">
           <Button.List>
-            <Button href="" target="_blank" link RootComponent="a">
-              Help
-            </Button>
             <Button
               href=""
               target="_blank"
@@ -51,7 +47,16 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
               RootComponent="a"
               color="primary"
             >
-              Install CLI
+              Book Viewing
+            </Button>
+            <Button
+              href=""
+              target="_blank"
+              size="sm"
+              RootComponent="a"
+              color="primary"
+            >
+              Make Offer
             </Button>
           </Button.List>
         </Nav.Item>

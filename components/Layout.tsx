@@ -29,6 +29,7 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
     <Head>
       <title>{title}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="google-site-verification" content="iXEe4TmQGYeUuwNdezJxnx_1dTs2snFO-qkdws7-Xow" />
     </Head>
     <Site.Wrapper
       children={children}

@@ -1,3 +1,4 @@
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const withTypescript = require('@zeit/next-typescript')
 const withCSS = require('@zeit/next-css')
 
@@ -21,6 +22,20 @@ module.exports = withTypescript(
           }
         }
       })
+
+      // https://github.com/Aerolab/nextjs-pwa
+      config.plugins.push(
+        new SWPrecacheWebpackPlugin({
+          verbose: true,
+          staticFileGlobsIgnorePatterns: [/\.next\//],
+          runtimeCaching: [
+            {
+              handler: 'networkFirst',
+              urlPattern: /^https?.*/
+            }
+          ]
+        })
+      )
 
       return config
     }

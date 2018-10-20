@@ -1071,10 +1071,6 @@ babel-plugin-syntax-jsx@6.18.0:
   version "6.18.0"
   resolved "http://registry.npmjs.org/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
 
-babel-plugin-transform-assets-import-to-string@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-assets-import-to-string/-/babel-plugin-transform-assets-import-to-string-1.2.0.tgz#9eb40850d637c67ce2f0fed38c99f365ae09beea"
-
 babel-plugin-transform-react-remove-prop-types@0.4.15:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.15.tgz#7ba830e77276a0e788cd58ea527b5f70396e12a7"
@@ -2873,6 +2869,10 @@ needle@^2.2.1:
 neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
+
+next-seo@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.2.0.tgz#304cfee5589c9d09c86d378bcf3109950c2d0337"
 
 next@^7.0.2:
   version "7.0.2"

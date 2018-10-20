@@ -2,6 +2,7 @@ import * as React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
+import NextSeo from 'next-seo'
 import { Site, Grid, List, Nav, Button } from 'tabler-react'
 
 import Logo from '../static/logo.svg'
@@ -31,6 +32,7 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="google-site-verification" content="iXEe4TmQGYeUuwNdezJxnx_1dTs2snFO-qkdws7-Xow" />
     </Head>
+    <NextSeo config={{ title: title }} />
     <Site.Wrapper
       children={children}
       headerProps={{

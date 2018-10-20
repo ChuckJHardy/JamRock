@@ -16,6 +16,7 @@ app.prepare()
 
       const directoryMapping = {
         '/service-worker.js': '.next',
+        '/manifest.json': 'static',
         '/robots.txt': 'static',
         '/sitemap.xml': 'static',
         '/favicon.ico': 'static'

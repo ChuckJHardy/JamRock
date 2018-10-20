@@ -10,6 +10,9 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1",
     "next": "^7.0.2",
     "next-seo": "^1.2.0",
     "react": "^16.5.2",
@@ -21,6 +24,8 @@
     "@types/next": "^7.0.1",
     "@types/react": "^16.4.16",
     "@types/react-dom": "16.0.8",
+    "eslint": "^5.7.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
     "file-loader": "^2.0.0",
     "typescript": "3.1.1",
     "url-loader": "^1.1.2"

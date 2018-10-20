@@ -2,6 +2,7 @@ node_modules
 .next
 out
 *.code-workspace
+.vscode
 
 # Lighthouse Report
 *.report.html

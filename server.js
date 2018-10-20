@@ -14,15 +14,23 @@ app.prepare()
       const parsedUrl = parse(req.url, true)
       const { pathname } = parsedUrl
 
-      if (pathname === '/service-worker.js') {
-        const filePath = join(__dirname, '.next', pathname)
-        app.serveStatic(req, res, filePath)
+      const directoryMapping = {
+        '/service-worker.js': '.next',
+        '/robots.txt': 'static',
+        '/sitemap.xml': 'static',
+        '/favicon.ico': 'static'
+      }
+
+      const match = directoryMapping[pathname]
+
+      if (match) {
+        app.serveStatic(req, res, join(__dirname, match, pathname))
       } else {
         handle(req, res, parsedUrl)
       }
     })
-      .listen(port, (err) => {
-        if (err) throw err
-        console.log(`> Ready on http://localhost:${port}`)
-      })
+    .listen(port, (err) => {
+      if (err) throw err
+      console.log(`> Ready on http://localhost:${port}`)
+    })
   })

@@ -5,7 +5,7 @@ import { Grid, Page } from 'tabler-react'
 export default class extends React.PureComponent {
   componentDidMount () {
     const isProduction = process.env.NODE_ENV === 'production'
-    console.log(isProduction)
+
     if (isProduction && 'serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/service-worker.js')

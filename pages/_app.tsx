@@ -8,8 +8,6 @@ import SEO from '../next-seo.config'
 import "tabler-react/dist/Tabler.css"
 import "../css/layout.css"
 
-
-
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     const globalProps = {

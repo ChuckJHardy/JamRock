@@ -1,0 +1,14 @@
+{
+    "name": "Pik.Space",
+    "short_name": "Pik.Space",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "description": "Sell Your Property",
+    "icons": [{
+      "src": "/static/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }]
+  }

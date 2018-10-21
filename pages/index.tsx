@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/Layout';
 import { Grid, Page } from 'tabler-react'
 
+import Stack from '../components/Stack'
+
 export default class extends React.PureComponent {
   componentDidMount () {
     const isProduction = process.env.NODE_ENV === 'production'
@@ -21,10 +23,10 @@ export default class extends React.PureComponent {
   render () {
     return (
       <Layout title="Home">
-        <Page.Content title="Dashboard">
-          <Grid.Row cards={true}>
-            <Grid.Col width={6} sm={4} lg={2}>
-              <p>This is the homepage</p>
+        <Page.Content title="Higher Moor">
+          <Grid.Row>
+            <Grid.Col>
+              <Stack></Stack>
             </Grid.Col>
           </Grid.Row>
         </Page.Content>

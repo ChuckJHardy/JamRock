@@ -5,8 +5,6 @@ import { withRouter } from 'next/router'
 import NextSeo from 'next-seo'
 import { Site, Grid, List, Nav, Button } from 'tabler-react'
 
-import Logo from '../static/logo.svg'
-
 type Props = {
   title?: string
 }
@@ -36,7 +34,7 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
       headerProps={{
         href: '/',
         alt: 'Pik Space',
-        imageURL: Logo,
+        imageURL: '../static/pik-logo.svg',
         navItems: (
           <Nav.Item type="div" className="d-none d-md-flex">
           <Button.List>

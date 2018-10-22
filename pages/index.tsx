@@ -21,9 +21,18 @@ export default class extends React.PureComponent {
   }
 
   render () {
+    const options = (
+      <h1 className="page-title">£410,000</h1>
+    )
+
     return (
       <Layout title="Home">
-        <Page.Content title="Higher Moor">
+        <Page.Content>
+          <Page.Header
+            title="Higher Moor"
+            subTitle="A great family home situated in a beautiful village renound for it's natural beauty."
+            options={options}
+          />
           <Grid.Row>
             <Grid.Col>
               <Stack></Stack>

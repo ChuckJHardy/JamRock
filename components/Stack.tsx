@@ -4,7 +4,7 @@ import StackGrid, { transitions } from "react-stack-grid";
 const transition = transitions.fade;
 
 const images = [
-  { src: 'https://ucarecdn.com/acea2f07-6c79-469b-a3fa-48136dfcd54c/-/resize/300x/IMG_1111.jpg', label: 'Sample image 1' },
+  { src: 'https://ucarecdn.com/0108b138-e59c-4ead-93f7-f4041eae122b/-/resize/300x/IMG_1111.jpg', label: 'Sample image 1' },
   { src: 'https://ucarecdn.com/f093ff7d-54a9-472e-a1a4-b99358e3a184/-/resize/300x/IMG_0024.jpg', label: 'Sample image 2' },
   { src: 'https://ucarecdn.com/baafbdb8-c0da-46a9-98cf-0c48d06ba917/-/resize/300x/IMG_0180.jpg', label: 'Sample image 4' },
   { src: 'https://ucarecdn.com/fc53fc72-896c-46f7-a3eb-91b984fd9837/-/resize/300x/IMG_0200.jpg', label: 'Sample image 5' },

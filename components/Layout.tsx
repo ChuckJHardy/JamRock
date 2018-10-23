@@ -19,8 +19,8 @@ const NavLink = (props) => {
 }
 
 const navBarItems = [
-  { value: "Home", to: "/", icon: "home", LinkComponent: withRouter(NavLink) },
-  { value: "About", to: "/about", icon: "eye", LinkComponent: withRouter(NavLink) },
+  { value: "Summary", to: "/", icon: "home", LinkComponent: withRouter(NavLink) },
+  { value: "Gallery", to: "/gallery", icon: "eye", LinkComponent: withRouter(NavLink) },
 ]
 
 const Layout: React.SFC<Props> = ({ children, title = 'This is the default title' }) => (
@@ -64,7 +64,8 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
       navProps={{ itemsObjects: navBarItems }}
       footerProps={{
         links: [
-          <Link href="/"><a>Home</a></Link>,
+          <Link href="/"><a>Summary</a></Link>,
+          <Link href="/gallery"><a>Gallery</a></Link>,
         ],
         copyright: (
           <React.Fragment>
@@ -88,9 +89,27 @@ const Layout: React.SFC<Props> = ({ children, title = 'This is the default title
               </List>
             </Grid.Col>
             <Grid.Col auto={true}>
-              <Button href="" size="sm" outline color="primary" RootComponent="a">
-                Install CLI
-              </Button>
+              <Button.List>
+                <Button
+                  href=""
+                  target="_blank"
+                  outline
+                  size="sm"
+                  RootComponent="a"
+                  color="primary"
+                >
+                  Book Viewing
+                </Button>
+                <Button
+                  href=""
+                  target="_blank"
+                  size="sm"
+                  RootComponent="a"
+                  color="primary"
+                >
+                  Make Offer
+                </Button>
+              </Button.List>
             </Grid.Col>
           </React.Fragment>
         )

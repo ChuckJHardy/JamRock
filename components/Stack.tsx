@@ -18,7 +18,7 @@ const RealWorld = () => (
   <StackGrid
     monitorImagesLoaded
     columnWidth={'25%'}
-    duration={600}
+    duration={0}
     gutterWidth={2}
     gutterHeight={2}
     easing={null}

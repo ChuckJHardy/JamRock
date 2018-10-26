@@ -31,9 +31,15 @@ export default class extends React.PureComponent {
         <Page.Content>
           <Page.Header
             title="Higher Moor"
-            subTitle="A great family home situated in a beautiful village renowned for its natural beauty."
+            subTitle=""
             options={options}
           />
+          <Grid.Row>
+            <Grid.Col>
+              <p>
+A well laid out and presented 3 bedroom bungalow with adjoining 1 bedroom self-contained flat in a peaceful edge of village location. Set in about 12.7 acres there are 3 timber holiday lodges and 3 fishing lakes generating an income. Planning permission for further lodges. EPC Band D (bungalow).</p>
+            </Grid.Col>
+          </Grid.Row>
           <Grid.Row>
             <Grid.Col>
               <Stack></Stack>
